@@ -14,10 +14,10 @@
   <input type="text" class="form-control" id="description" name="description"  [(ngModel)]="messageToAdd.description" #description="ngModel">
 
   <label for="image">url de l'image</label>
-  <input type="url" class="form-control" id="image" name="image"  [(ngModel)]="messageToAdd.image" #image="ngModel">
+  <input type="text" class="form-control" id="image" name="image"  [(ngModel)]="messageToAdd.image" #image="ngModel">
 
   <label for="dateAjout">Date du message</label>
-  <input type="datetime-local" class="form-control" id="dateAjout" name="dateAjout" required [(ngModel)]="messageToAdd.dateAjout" #dateAjout="ngModel">
+  <input type="datetime-local" class="form-control" id="dateAjout" name="dateAjout"  [(ngModel)]="messageToAdd.dateAjout" #dateAjout="ngModel">
 
   <!--
     <label for="atmosphere">Atmosphère du vaisseau</label>

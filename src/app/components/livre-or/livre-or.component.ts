@@ -22,4 +22,12 @@ export class LivreOrComponent implements OnInit {
 
   }
 
+  removeMessage(id:number){
+    this.messageService.removeMessage(id).subscribe(then =>{
+      this.messageService.getAllMessages().subscribe((data:Message[])=>{
+        this.messages=data
+      });
+    });
+  };
+
 }

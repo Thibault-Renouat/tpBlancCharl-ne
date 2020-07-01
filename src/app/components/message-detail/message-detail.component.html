@@ -1,1 +1,30 @@
 <p>message-detail works!</p>
+
+
+<table class="table table-light">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Titre</th>
+    <th scope="col">Description</th>
+    <th scope="col">Image</th>
+    <th scope="col">Date</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr class="trBody" >
+    <th scope="row">{{messageDetail.id}}</th>
+    <th scope="row">{{messageDetail.titre}}</th>
+    <th scope="row">{{messageDetail.description}}</th>
+    <!--    <th scope="row">{{messageDetail.image}}</th>-->
+    <th><img style="max-width: 150px; max-height: 150px" src="{{messageDetail.image}}" alt="photo Charlène"></th>
+    <th scope="row">{{messageDetail.dateAjout | date:'fullDate'}}</th>
+    <!--
+        <th scope="row" ><p class="removeVaisseauLink" (click)="removeVaisseau(vaisseau.id)"  style="cursor: pointer; color: red">supprimer le vaisseau {{vaisseau.nom}}</p></th>
+        <th scope="row"><a [routerLink]="['/vaisseau/edit', vaisseau.id]"> éditer le vaisseau {{vaisseau.nom}}</a></th>
+    -->
+
+
+  </tr>
+  </tbody>
+</table>

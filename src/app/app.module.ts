@@ -10,13 +10,15 @@ import { AddMessageComponent } from './components/add-message/add-message.compon
 import { MessageDetailComponent } from './components/message-detail/message-detail.component';
 import { EditMessageComponent } from './components/edit-message/edit-message.component';
 import {FormsModule} from '@angular/forms';
+import { MenuComponent } from './components/menu/menu.component';
 @NgModule({
   declarations: [
     AppComponent,
     LivreOrComponent,
     AddMessageComponent,
     MessageDetailComponent,
-    EditMessageComponent
+    EditMessageComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,

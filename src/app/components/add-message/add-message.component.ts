@@ -24,7 +24,7 @@ export class AddMessageComponent implements OnInit {
 
   onSubmit(): void{
     this.messageService.addMessage(this.messageToAdd).subscribe(then => {
-      this.router.navigate(['/vaisseaux']);
+      this.router.navigate(['/home']);
     });
   }
 

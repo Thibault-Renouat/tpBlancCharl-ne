@@ -16,6 +16,7 @@ export class MessageService {
     })
   };
 
+
 messages:Message[];
 
   constructor(private http: HttpClient) { }
@@ -26,11 +27,36 @@ messages:Message[];
   }
 
 
+  getOneMessageById(id:number):Observable<Message> {
+    return this.http.get<Message>(this.apiUrlMessages +'/'+ id).pipe(retry(1),
+      catchError((this.handleError)));
+  }
+
+
+
   addMessage(message: Message): Observable<Message> {
     return this.http.post<Message>(this.apiUrlMessages, message, this.httpOptions).pipe(
       catchError(this.handleError)
     );
   }
+
+
+  removeMessage(id:number):Observable<Message> {
+    return this.http.delete<Message>(this.apiUrlMessages + '/' + id).pipe(
+      retry(1),
+      catchError(this.handleError)
+    );
+
+
+  }
+
+
+  edit(message: Message): Observable<Message> {
+    return this.http.put<Message>(this.apiUrlMessages +'/'+ message.id, message, this.httpOptions).pipe(
+      catchError(this.handleError)
+    );
+  }
+
 
 
 

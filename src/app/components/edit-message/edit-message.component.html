@@ -1,1 +1,29 @@
-<p>edit-message works!</p>
+<form #messageForm= "ngForm" (ngSubmit)="onSubmit()">
+
+  <label for="titre">Titre du message</label>
+  <input type="text" class="form-control" id="titre" name="titre" required [(ngModel)]="messageToEdit.titre" #titre="ngModel">
+  <div [hidden]="titre.valid"
+       class="alert alert-danger">
+    Faut tout remplir !!!!!!
+  </div>
+
+  <label for="description">Description du message</label>
+  <input type="text" class="form-control" id="description" name="description"  [(ngModel)]="messageToEdit.description" #description="ngModel">
+
+  <label for="image">url de l'image</label>
+  <input type="text" class="form-control" id="image" name="image"  [(ngModel)]="messageToEdit.image" #image="ngModel">
+
+<!--  <label for="dateAjout">Date du message</label>-->
+<!--  <input type="datetime-local" class="form-control" id="dateAjout" name="dateAjout"  [(ngModel)]="messageToEdit.dateAjout" #dateAjout="ngModel">-->
+
+  <!--
+    <label for="atmosphere">Atmosphère du vaisseau</label>
+    <input type="number" class="form-control" id="atmosphere" name="atmosphere" required [(ngModel)]="vaisseau.atmosphere" #atmosphere="ngModel">
+  -->
+
+
+  <input [disabled]="!messageForm.valid" type="submit">
+
+  <hr>
+<!--  <button (click)="logTest()">Debug</button>-->
+</form>
