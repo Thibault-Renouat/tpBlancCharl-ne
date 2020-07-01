@@ -1,0 +1,32 @@
+<p>livre-or works!</p>
+
+<button routerLink="/add-message">Ajouter un message</button>
+<br><br>
+
+<table class="table table-light">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Titre</th>
+    <th scope="col">Description</th>
+    <th scope="col">Image</th>
+    <th scope="col">Date</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr class="trBody" *ngFor="let message of messages ">
+    <th scope="row">{{message.id}}</th>
+    <th scope="row"><a [routerLink]="['/vaisseaux', message.id]">{{message.titre  | uppercase}}</a></th>
+    <th scope="row">{{message.description}}</th>
+<!--    <th scope="row">{{message.image}}</th>-->
+    <th><img style="max-width: 150px; max-height: 150px" src="{{message.image}}" alt="photo Charlène"></th>
+    <th scope="row">{{message.dateAjout | date:'fullDate'}}</th>
+<!--
+    <th scope="row" ><p class="removeVaisseauLink" (click)="removeVaisseau(vaisseau.id)"  style="cursor: pointer; color: red">supprimer le vaisseau {{vaisseau.nom}}</p></th>
+    <th scope="row"><a [routerLink]="['/vaisseau/edit', vaisseau.id]"> éditer le vaisseau {{vaisseau.nom}}</a></th>
+-->
+
+
+  </tr>
+  </tbody>
+</table>

@@ -3,14 +3,25 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LivreOrComponent } from './components/livre-or/livre-or.component';
+import {HttpClientModule} from '@angular/common/http';
+import { AddMessageComponent } from './components/add-message/add-message.component';
+import { MessageDetailComponent } from './components/message-detail/message-detail.component';
+import { EditMessageComponent } from './components/edit-message/edit-message.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LivreOrComponent,
+    AddMessageComponent,
+    MessageDetailComponent,
+    EditMessageComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
