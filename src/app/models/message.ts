@@ -6,7 +6,7 @@ export class Message {
   image:string;
   dateAjout:DateConstructor;
 
-  constructor(id: number, titre: string, description: string=null, image: string=null, dateAjout: DateConstructor=null) {
+  constructor(id: number=null, titre: string=null, description: string=null, image: string=null, dateAjout: DateConstructor=null) {
     this.id = id;
     this.titre = titre;
     this.description = description;

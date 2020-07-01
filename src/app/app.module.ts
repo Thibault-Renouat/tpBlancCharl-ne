@@ -9,6 +9,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { AddMessageComponent } from './components/add-message/add-message.component';
 import { MessageDetailComponent } from './components/message-detail/message-detail.component';
 import { EditMessageComponent } from './components/edit-message/edit-message.component';
+import {FormsModule} from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +22,8 @@ import { EditMessageComponent } from './components/edit-message/edit-message.com
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

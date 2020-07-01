@@ -26,6 +26,14 @@ messages:Message[];
   }
 
 
+  addMessage(message: Message): Observable<Message> {
+    return this.http.post<Message>(this.apiUrlMessages, message, this.httpOptions).pipe(
+      catchError(this.handleError)
+    );
+  }
+
+
+
   handleError(error) {
     let errorMessage = '';
     if ( error.error instanceof ErrorEvent ) {
